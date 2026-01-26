@@ -2,6 +2,8 @@
 
 Professional coaching website for SLKing, LLC - Individual coaching focused on intimacy skills, relationships, and wealth mindset transformation.
 
+Live website: https://sloganking.github.io/coaching/
+
 ## About
 
 This website provides information about coaching services offered by Sean Logan King, including:
