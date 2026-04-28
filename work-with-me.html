@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work with me — Logan King</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --text: #e8e4de;
+            --muted: #8a8580;
+            --accent: #c9a96e;
+            --border: #2a2825;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header p.tagline {
+            font-size: 1rem;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .hero {
+            padding: 40px 0 80px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 32px;
+            color: var(--text);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .offer {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .offer-item {
+            margin-bottom: 40px;
+        }
+
+        .offer-item h4 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .offer-item .price {
+            font-size: 0.9rem;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .offer-item p {
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta h3 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+
+        .cta p {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+
+        .cta a.button {
+            display: inline-block;
+            padding: 16px 48px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .cta a.button:hover {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+        }
+
+        footer a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 48px 0 40px;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .offer, .cta {
+                padding: 56px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1><a href="index.html">Logan King</a></h1>
+        <p class="tagline">Seer</p>
+    </header>
+
+    <div class="hero">
+        <h2>Work with me</h2>
+        <p>Three engagement tiers. Choose based on what you need.</p>
+    </div>
+
+    <div class="offer">
+
+        <div class="offer-item">
+            <h4>The Diagnostic</h4>
+            <p class="price">$50,000</p>
+            <p>I find the invisible patterns running your life and help you understand why they're there. Up to 6 sessions within 2 months, 90 minutes each — however many it takes. You walk out seeing things you've never seen and knowing what to do about them.</p>
+        </div>
+
+        <div class="offer-item">
+            <h4>The Tactical Advisory</h4>
+            <p class="price">From $200,000</p>
+            <p>For leadership teams, facilitation teams, retreat centers, and individuals navigating a high-stakes human situation — a conflict in progress, a reputational attack, a pattern repeating across your culture, a decision where the invisible dynamics matter more than the visible ones. I embed for 3 to 5 days, surface what no one else is seeing, and deliver a tactical document, a cheatsheet, and a debrief. You walk into the hard conversation knowing what to do. Priced per situation. Travel and accommodations billed at cost.</p>
+        </div>
+
+        <div class="offer-item">
+            <h4>Deeper Work</h4>
+            <p class="price">By conversation</p>
+            <p>For clients who've done the diagnostic or the advisory and want guided support dissolving the pattern — not just seeing it, but living free of it. 3 to 12 months, tailored to what you need. We discuss this after you've experienced the work.</p>
+        </div>
+
+    </div>
+
+    <div class="cta">
+        <h3>Not sure where to start?</h3>
+        <p>Book a free session — up to 90 minutes. Experience the work. Decide from there.</p>
+        <a href="sms:8654568455" class="button">Text me</a>
+    </div>
+
+    <footer>
+        <p><a href="index.html">← Back to home</a> · Logan King — Seer</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
