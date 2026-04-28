@@ -166,13 +166,13 @@ Teaching example from the April 2026 iteration.
 
 ### Strong — mirror + Seer language + paradox + guidance
 
-> **You keep getting the same result, no matter what you've tried. It's an invisible belief running it — one you can't see because it feels like reality. I find it, and I walk you out of it.**
+> **You keep getting the same result, no matter what you've tried. There's an invisible belief running it — one you can't see because it feels like reality. I find it, and I walk you out of it.**
 > Once you see it, the way out becomes obvious.
 
 **Why it works:**
 
 1. **Mirror** — "You keep getting the same result, no matter what you've tried." Inarguable. Reader drops in from their own lived experience.
-2. **Cause named in Seer language** — "It's an invisible belief running it." Direct. No hedging.
+2. **Cause revealed in Seer language** — "There's an invisible belief running it." Reveal energy. The Seer looked, and named what's there.
 3. **Paradox** — "one you can't see because it feels like reality." The iconic mechanism clause that explains in seven words why every prior attempt failed.
 4. **Guidance** — "I find it, and I walk you out of it." Seer identity plus Guide identity. Action past diagnosis.
 5. **Reader's question becomes "can he really?"** — not "do I have this problem?" They're already qualified before they arrived.
