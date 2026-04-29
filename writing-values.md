@@ -164,18 +164,36 @@ Teaching example from the April 2026 iteration.
 
 **What's wrong:** Inarguable opening but each beat is small. Reader doesn't get a single strong image. No paradox. Feels like "a bunch of small things piled on top of each other."
 
-### Strong — mirror + Seer language + paradox + guidance
+### Strong at the structure level — too many moves
 
-> **You keep getting the same result, no matter what you've tried. There's an invisible belief running it — one you can't see because it feels like reality. I find it, and I walk you out of it.**
+> **You keep getting the same result, no matter what you've tried — there's an invisible belief running it, one you can't see because it feels like reality. I find it, and I walk you out.**
 > Once you see it, the way out becomes obvious.
+
+This version is inarguable and well-constructed, but it's carrying four moves (mirror, cause, paradox, guidance) at 34 words. A hero can't hold four moves without feeling like a pile of small things. It sounds good but doesn't hit.
+
+### 10x — one move, at force
+
+> **You're not here because you haven't tried. You're here because you can't see it. I can.**
+> Once you see it, the way out becomes obvious.
+
+17 words H2. Half the previous version. One idea carried at maximum force: *your problem isn't effort, it's vision, and I have the vision.*
 
 **Why it works:**
 
-1. **Mirror** — "You keep getting the same result, no matter what you've tried." Inarguable. Reader drops in from their own lived experience.
-2. **Cause revealed in Seer language** — "There's an invisible belief running it." Reveal energy. The Seer looked, and named what's there.
-3. **Paradox** — "one you can't see because it feels like reality." The iconic mechanism clause that explains in seven words why every prior attempt failed.
-4. **Guidance** — "I find it, and I walk you out of it." Seer identity plus Guide identity. Action past diagnosis.
-5. **Reader's question becomes "can he really?"** — not "do I have this problem?" They're already qualified before they arrived.
+1. **First sentence disarms the self-blame.** The stuck person's internal monologue is "I must not be trying hard enough." Sentence one names and dismisses that directly. Inarguable — they have tried. It lands in the body before the mind can object.
+2. **Second sentence reframes the whole problem.** "Can't see it" names the architecture of the stuckness — not effort, not willpower, not intelligence, *vision*. This is show-don't-tell: describing the actual mechanism rather than claiming symptoms.
+3. **"I can." Two words. Close.** Total confidence in minimum words. Not "I can see it." Not "I find it and walk you out." Just *I can.* The reader completes the sentence. State-and-invite in its purest form.
+4. **The hero does the seeing it describes.** By correctly identifying *why the reader is on this page*, the hero demonstrates seeing rather than claiming it. Show-don't-tell, executed structurally.
+5. **Rhythm that builds then lands.** 8 words → 7 words → 2 words. Each sentence shorter than the last. Final two-word sentence is the punch after setup.
+6. **The reader's question becomes "can he really?"** — exactly the right question. They're already qualified before they arrived.
+
+**What it gives up (intentionally):**
+
+- The paradox clause ("feels like reality") — iconic but belongs elsewhere on the page, not in the hero
+- Explicit "walk you out" — the subtitle carries this, made conditional on the seeing
+- "Invisible belief" language — lives in the problem section and "what I do," where it has room to land
+
+The hero carries one idea. Every other brand element lives downstream.
 
 ---
 
