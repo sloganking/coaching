@@ -65,6 +65,8 @@ The least I need to say for someone to understand what I offer and decide if the
 
 Every sentence should be about their freedom, their result, their life — or the mechanism I use to reach it. Not about my credentials, my journey, my healing.
 
+**Direction of service — the test for big claims.** Modesty is a vice here too: hiding value doesn't serve the reader (*The Prosperous Coach*). Grandiosity isn't the problem — auditioning is. The test is direction: does the sentence give the reader information they need to decide, or does it ask them to validate me? The same fact can be either. "I wrote the field manual on this" stapled to a service claim is auditioning. "I wrote a book on how good people harm each other" stated flat, where the reader needs it, is information. State magnitude as fact, never as plea. The cure for modesty is bigger claims stated more flatly — not more claims defended harder.
+
 ### 9. No life story on the sales page.
 
 If they need to know more about me, they'll ask. Or I'll tell them in the free session. The website is not my resume.
