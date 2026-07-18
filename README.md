@@ -2,7 +2,7 @@
 
 Professional coaching website for SLKing, LLC - Individual coaching focused on intimacy skills, relationships, and wealth mindset transformation.
 
-Live website: https://sloganking.github.io/coaching/
+Live website: https://slkingco.com/
 
 ## About
 
