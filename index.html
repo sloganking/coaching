@@ -218,6 +218,18 @@
             }
         }
 
+        /* Large screens: scale the whole composition up — wider measure + proportionally larger type,
+           so lines keep the same character count instead of just getting longer. */
+        @media (min-width: 1200px) {
+            html {
+                font-size: 18px;
+            }
+
+            .container {
+                max-width: 800px;
+            }
+        }
+
         /* Scroll reveal — .reveal is only added by JS, so content stays visible without it */
         .reveal {
             opacity: 0;

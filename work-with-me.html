@@ -181,6 +181,17 @@
             }
         }
 
+        /* Large screens: scale the whole composition up — wider measure + proportionally larger type. */
+        @media (min-width: 1200px) {
+            html {
+                font-size: 18px;
+            }
+
+            .container {
+                max-width: 800px;
+            }
+        }
+
         /* Scroll reveal — .reveal is only added by JS, so content stays visible without it */
         .reveal {
             opacity: 0;
