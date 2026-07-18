@@ -1,64 +1,37 @@
-# Transformational Coaching Website
+# Logan King — Coaching Website
 
-Professional coaching website for SLKing, LLC - Individual coaching focused on intimacy skills, relationships, and wealth mindset transformation.
+The website for SLKing, LLC — Logan King's coaching practice: individual work on the invisible beliefs running money, relationships, and confidence, plus high-stakes advisory for organizations.
 
-Live website: https://slkingco.com/
+**Live site: https://slkingco.com/** (custom domain on GitHub Pages; the old `sloganking.github.io/coaching/` URLs redirect here automatically.)
 
-## About
+## Before editing any copy
 
-This website provides information about coaching services offered by Sean Logan King, including:
-- Service descriptions and approach
-- Pricing and investment details
-- Background and credentials
-- Client onboarding process
-- Contact information
+Read [`writing-values.md`](writing-values.md) first and run its ship-tests. The site states; it doesn't convince. Copy that argues, hedges, or defends gets cut.
 
-## GitHub Pages Deployment
+## Structure
 
-This site is designed to be hosted on GitHub Pages.
+- `index.html` — the whole main page: hero, problem, what I do, client experiences (video + text testimonials), how it works, crisis work, the book, bio, who it's (not) for, CTA. Single file, inline CSS/JS, no build step.
+- `work-with-me.html` — engagement tiers and pricing.
+- `404.html` — branded not-found page.
+- `writing-values.md` — the voice/values spec for all site copy.
+- `logan.jpg`, `favicon.png`, `apple-touch-icon.png`, `og-image.jpg` — photo and derived icon/link-preview assets.
 
-### Setup Instructions
+## Deploying
 
-1. **Commit and push** this repository to GitHub:
-   ```bash
-   git add .
-   git commit -m "Initial coaching website"
-   git push origin main
-   ```
+Push to `main` → GitHub Pages rebuilds → live at slkingco.com in about a minute. Browsers may cache a page for up to 10 minutes; hard-refresh to see a fresh deploy immediately.
 
-2. **Enable GitHub Pages:**
-   - Go to your repository on GitHub
-   - Click on **Settings** (gear icon in the top menu)
-   - Scroll down to **Pages** in the left sidebar
-   - Under **Source**, select `main` branch
-   - Click **Save**
+## Domain & DNS (GoDaddy)
 
-3. **Access your site:**
-   - Your site will be available at: `https://[your-username].github.io/coaching-website/`
-   - It may take a few minutes for the site to go live
-   - GitHub will show you the URL once it's deployed
-
-### Custom Domain (Optional)
-
-If you want to use your LLC domain (slkingco.com):
-1. Add a `CNAME` file to this repository with your domain name
-2. Configure your DNS settings with your domain registrar
-3. Point your domain to GitHub Pages (instructions in GitHub Pages settings)
-
-## Technology
-
-- Pure HTML/CSS (no build process required)
-- Mobile-responsive design
-- Modern gradient aesthetic
-- Optimized for professional presentation
+- `slkingco.com` A records (`@`) → GitHub Pages IPs `185.199.108.153` / `.109.153` / `.110.153` / `.111.153`
+- `www` CNAME → `sloganking.github.io`
+- The `CNAME` file in this repo tells GitHub Pages which domain to serve.
+- **Do not touch the MX/TXT records** — they route the logan@slkingco.com Google Workspace email.
 
 ## Contact
 
-For questions about the coaching services:
-- Email: logan@slkingco.com
 - Text/SMS: +1-865-456-8455
+- Email: logan@slkingco.com
 
 ---
 
-© 2025 SLKing, LLC
-
+© 2026 SLKing, LLC
