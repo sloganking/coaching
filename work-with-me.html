@@ -180,6 +180,18 @@
                 padding: 56px 0;
             }
         }
+
+        /* Scroll reveal — .reveal is only added by JS, so content stays visible without it */
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
     </style>
 </head>
 <body>
@@ -230,6 +242,26 @@
     </footer>
 
 </div>
+
+<script>
+(() => {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els = document.querySelectorAll('header, .hero, .offer-item, .cta, footer');
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => {
+        el.classList.add('reveal');
+        io.observe(el);
+    });
+})();
+</script>
 
 </body>
 </html>

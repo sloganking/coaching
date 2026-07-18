@@ -86,6 +86,14 @@
             border-bottom: 1px solid var(--border);
         }
 
+        /* Alternate section backgrounds, full-bleed beyond the 680px container.
+           Kept ~2% lighter than the base with a warm cast — a whisper, not a stripe. */
+        section:nth-of-type(even) {
+            background: #0f0e0c;
+            box-shadow: 0 0 0 100vmax #0f0e0c;
+            clip-path: inset(0 -100vmax);
+        }
+
         section h3 {
             font-size: 1.4rem;
             font-weight: 400;
@@ -209,6 +217,18 @@
                 font-size: 1.1rem;
             }
         }
+
+        /* Scroll reveal — .reveal is only added by JS, so content stays visible without it */
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
     </style>
 </head>
 <body>
@@ -302,9 +322,13 @@
 
     <section>
         <h3>Who I am</h3>
-        <img src="logan.jpg" alt="Logan King" style="display: block; margin: 0 auto 32px; width: min(260px, 70%); border-radius: 4px; border: 1px solid var(--border);">
-        <p>I spent years as a systems engineer, finding the one hidden fault that everything else in a complex system quietly depends on. Now I do that with human lives.</p>
-        <p>The seeing came from walking through my own fire — and from studying, up close, in the highest-pressure human environments I could find, how good people harm each other when invisible beliefs run the show. The book above is what I learned.</p>
+        <div style="display: flex; gap: 36px; align-items: flex-start; flex-wrap: wrap;">
+            <img src="logan.jpg" alt="Logan King" style="width: 220px; max-width: 100%; flex-shrink: 0; border-radius: 4px; border: 1px solid var(--border);">
+            <div style="flex: 1; min-width: 260px;">
+                <p>I spent years as a systems engineer, finding the one hidden fault that everything else in a complex system quietly depends on. Now I do that with human lives.</p>
+                <p>The seeing came from walking through my own fire — and from studying, up close, in the highest-pressure human environments I could find, how good people harm each other when invisible beliefs run the show. The book above is what I learned.</p>
+            </div>
+        </div>
     </section>
 
     <section>
@@ -334,6 +358,26 @@
     </footer>
 
 </div>
+
+<script>
+(() => {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els = document.querySelectorAll('header, .hero, section, .cta, footer');
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => {
+        el.classList.add('reveal');
+        io.observe(el);
+    });
+})();
+</script>
 
 </body>
 </html>
