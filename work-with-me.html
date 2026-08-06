@@ -102,10 +102,13 @@
             margin-bottom: 40px;
         }
 
-        /* The recommended starting tier reads as the default at a glance. */
+        /* The recommended starting tier reads as the default at a glance:
+           the featured card is boxed; the other tiers stay open. */
         .offer-item:first-child {
+            background: #0f0e0c;
+            border: 1px solid var(--border);
             border-left: 2px solid var(--accent);
-            padding-left: 20px;
+            padding: 28px 28px 22px;
         }
 
         .offer-item h4 {
