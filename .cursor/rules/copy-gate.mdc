@@ -1,0 +1,10 @@
+---
+description: Copy gate for the live coaching site — mandatory reading before editing any user-facing text
+alwaysApply: true
+---
+
+This repo is the LIVE site slkingco.com (GitHub Pages — a push deploys immediately).
+
+Before editing or committing ANY user-facing text: read `writing-values.md` (this repo) and `../RPM/selling-language.md` (private RPM repo), and pass every changed sentence through both checklists — especially P11 (stand on ground you actually hold) and P13 (state, don't negate). If `../RPM` is unavailable, do not commit copy changes.
+
+Default approval gate: Logan picks the exact wording before it ships; only choose for him when he explicitly delegated the choice. Full instructions: `CLAUDE.md`.

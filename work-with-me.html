@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+    COPY GATE (for any AI or human editing this file):
+    A push to this repo deploys LIVE to slkingco.com immediately.
+    Before changing ANY user-facing text, read writing-values.md (this repo)
+    and ../RPM/selling-language.md (Logan's private repo), and pass every
+    changed sentence through their checklists. Full instructions: CLAUDE.md.
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work with me — Logan King</title>
+    <meta name="description" content="Three engagement tiers with Logan King: the Diagnostic, the Tactical Advisory, and Deeper Work. First conversation is free — up to 90 minutes.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Work with me — Logan King">
+    <meta property="og:description" content="Three engagement tiers: the Diagnostic, the Tactical Advisory, and Deeper Work. First conversation is free — up to 90 minutes.">
+    <meta property="og:image" content="https://slkingco.com/og-image.jpg">
+    <meta property="og:url" content="https://slkingco.com/work-with-me.html">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
         :root {
             --bg: #0a0a0a;
@@ -86,6 +102,15 @@
             margin-bottom: 40px;
         }
 
+        /* The recommended starting tier reads as the default at a glance:
+           the featured card is boxed; the other tiers stay open. */
+        .offer-item:first-child {
+            background: #0f0e0c;
+            border: 1px solid var(--border);
+            border-left: 2px solid var(--accent);
+            padding: 28px 28px 22px;
+        }
+
         .offer-item h4 {
             font-size: 1.1rem;
             font-weight: 400;
@@ -107,7 +132,17 @@
 
         .cta {
             padding: 80px 0;
+        }
+
+        /* The body reads left like the rest of the page; the button and the
+           access lines beneath it form a centered action block. */
+        .cta .button-row,
+        .cta .button-row ~ p {
             text-align: center;
+        }
+
+        .cta .button-row {
+            margin-top: 8px;
         }
 
         .cta h3 {
@@ -171,6 +206,18 @@
                 padding: 56px 0;
             }
         }
+
+        /* Scroll reveal — .reveal is only added by JS, so content stays visible without it */
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
     </style>
 </head>
 <body>
@@ -184,21 +231,21 @@
 
     <div class="hero">
         <h2>Work with me</h2>
-        <p>Three engagement tiers. Choose based on what you need.</p>
+        <p>Three engagement tiers. Most begin with the Diagnostic.</p>
     </div>
 
     <div class="offer">
 
         <div class="offer-item">
             <h4>The Diagnostic</h4>
-            <p class="price">$10,000</p>
-            <p>For the first time, you see the invisible patterns running your life — how they've been creating the outcomes that keep hurting — and how to create the outcomes you actually want. Up to 6 sessions within 2 months, 90 minutes each.</p>
+            <p class="price">$100,000</p>
+            <p>We find the root pattern — the belief so embedded it feels like reality. You watch it running, live, building the outcomes you thought were happening to you. Then you make the move that's actually yours, while I'm still beside you. Six weeks, start to finish.</p>
         </div>
 
         <div class="offer-item">
             <h4>The Tactical Advisory</h4>
-            <p class="price">From $50,000</p>
-            <p>Something in your organization isn't working and no one inside it can see why. In 3 to 5 days, you will. You walk away with a tactical document, a cheatsheet, and a debrief — built around your values, made tactically executable. You walk into the hard conversation knowing exactly what to do. Priced per situation. Travel billed at cost.</p>
+            <p class="price">From $500,000</p>
+            <p>Something in your organization isn't working and no one inside it can see why. In 3 to 5 days, you will. You walk away with a tactical document, a cheatsheet, and a debrief — built around your values, made tactically executable. You walk into the hard conversation knowing exactly what to do. Priced per situation. One number, everything included.</p>
         </div>
 
         <div class="offer-item">
@@ -212,7 +259,10 @@
     <div class="cta">
         <h3>Bring me the problem you've given up on.</h3>
         <p>One conversation — up to 90 minutes, no charge. I'll show you what's actually running it. If we're a fit, we'll both know. If not, we part ways.</p>
-        <a href="sms:8654568455" class="button">Text me</a>
+        <p>What I reveal may feel counterintuitive at first. If what you couldn't see were close to how you already think, you would have found it by now.</p>
+        <div class="button-row"><a href="sms:8654568455" class="button">Text me</a></div>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--muted);">I answer these myself, between deep work and retreat weeks. If it's burning, say so — crisis moves first.</p>
+        <p style="margin-top: 8px; font-size: 0.9rem; color: var(--muted);">On a computer? Text me from your phone:<br>+1 (865) 456-8455</p>
     </div>
 
     <footer>
@@ -220,6 +270,26 @@
     </footer>
 
 </div>
+
+<script>
+(() => {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els = document.querySelectorAll('header, .hero, .offer-item, .cta, footer');
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => {
+        el.classList.add('reveal');
+        io.observe(el);
+    });
+})();
+</script>
 
 </body>
 </html>
