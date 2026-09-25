@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <!--
     COPY GATE (for any AI or human editing this file):
@@ -9,209 +9,402 @@
 -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logan King — Seer</title>
-    <meta name="description" content="I find the problem you've given up on — the invisible belief running your money, relationships, and confidence — and walk you out of it. Coaching for individuals; high-stakes advisory for organizations.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Logan King | Powerful Relationships</title>
+    <meta name="description" content="Every yes you want is someone else's to give. Logan King reads what is actually happening between people, in money and in intimacy, and shows you how to hold your power in it. The first conversation is free, up to 90 minutes.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Logan King — Seer">
-    <meta property="og:description" content="I find the problem you've given up on — the invisible belief running your money, relationships, and confidence — and walk you out of it.">
+    <meta property="og:title" content="Logan King | Powerful Relationships">
+    <meta property="og:description" content="Every yes you want is someone else's to give. Money and intimacy: two doors, one engine, reading people.">
     <meta property="og:image" content="https://slkingco.com/og-image.jpg">
     <meta property="og:url" content="https://slkingco.com/">
     <meta name="twitter:card" content="summary_large_image">
     <style>
         :root {
             --bg: #0a0a0a;
+            --panel: #11100e;
             --text: #e8e4de;
-            --muted: #8a8580;
+            --muted: #8f8a84;
             --accent: #c9a96e;
+            --accent-dim: rgba(201, 169, 110, 0.14);
             --border: #2a2825;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Georgia', serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.8;
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
         }
 
         .container {
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 22px;
         }
 
-        header {
-            padding: 80px 0 60px;
-            text-align: center;
+        a { color: var(--accent); }
+
+        /* ---------- Top bar ---------- */
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
         }
 
-        header h1 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            letter-spacing: 0.15em;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 8px;
+            font-size: 0.85rem;
         }
 
-        header p.tagline {
-            font-size: 1rem;
-            color: var(--muted);
-            font-style: italic;
-        }
+        .brand svg { width: 22px; height: 22px; flex-shrink: 0; }
 
-        .hero {
-            padding: 40px 0 80px;
+        .topbar .nav-link {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
             border-bottom: 1px solid var(--border);
         }
 
-        .hero h2 {
-            font-size: 2rem;
+        /* ---------- Hero ---------- */
+        .hero {
+            padding: 56px 0 40px;
+        }
+
+        .hero .eyebrow {
+            color: var(--accent);
+            font-size: 0.78rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: 2.35rem;
             font-weight: 400;
-            line-height: 1.4;
-            margin-bottom: 32px;
-            color: var(--text);
+            line-height: 1.2;
+            margin-bottom: 24px;
         }
 
         .hero p {
             font-size: 1.15rem;
             color: var(--muted);
-            margin-bottom: 24px;
+            max-width: 34em;
         }
 
-        section {
-            padding: 80px 0;
+        .jump { display: none; }
+
+        .js .jump {
+            display: inline-block;
+            margin-top: 26px;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            font-size: 1rem;
+        }
+
+        @media (max-width: 420px) {
+            .hero .eyebrow { letter-spacing: 0.2em; font-size: 0.72rem; }
+        }
+
+        /* ---------- Doors ---------- */
+        .doors {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 24px 0 16px;
+        }
+
+        .door {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-top: 2px solid var(--accent);
+            padding: 26px 24px 22px;
+        }
+
+        .door .numeral {
+            color: var(--accent);
+            font-size: 0.78rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+        }
+
+        .door h2 {
+            font-size: 1.7rem;
+            font-weight: 400;
+            margin: 6px 0 4px;
+        }
+
+        .door .who {
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+
+        .door ul { list-style: none; }
+
+        .door li {
+            padding: 10px 0 10px 18px;
+            border-top: 1px solid var(--border);
+            position: relative;
+            font-size: 1.02rem;
+        }
+
+        .door li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1.2em;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            transform: rotate(45deg);
+        }
+
+        .engine {
+            padding: 28px 0 56px;
+            color: var(--muted);
+            font-size: 1.08rem;
             border-bottom: 1px solid var(--border);
         }
 
-        /* Alternate section backgrounds, full-bleed beyond the 680px container.
-           Kept ~2% lighter than the base with a warm cast — a whisper, not a stripe. */
-        section:nth-of-type(even) {
-            background: #0f0e0c;
-            box-shadow: 0 0 0 100vmax #0f0e0c;
-            clip-path: inset(0 -100vmax);
+        .engine strong { color: var(--text); font-weight: 400; }
+
+        /* ---------- Sections ---------- */
+        section {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border);
         }
 
         section h3 {
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             font-weight: 400;
-            margin-bottom: 24px;
             color: var(--accent);
+            margin-bottom: 20px;
+            line-height: 1.35;
         }
 
         section p {
             font-size: 1.05rem;
-            margin-bottom: 20px;
-            color: var(--text);
+            margin-bottom: 18px;
         }
 
-        section p.muted {
+        section p.muted, .muted { color: var(--muted); }
+
+        /* ---------- The question flow ---------- */
+        .reader { display: none; }
+        .js .reader { display: block; }
+
+        .reader .step-label {
             color: var(--muted);
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
         }
 
-        blockquote {
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--text);
-            padding: 32px 0;
-            border-bottom: 1px solid var(--border);
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
         }
 
-        blockquote:last-child {
-            border-bottom: none;
-        }
-
-        .offer {
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .offer h3 {
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: var(--accent);
-            margin-bottom: 32px;
-        }
-
-        .offer-item {
-            margin-bottom: 40px;
-        }
-
-        .offer-item h4 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-
-        .offer-item .price {
-            font-size: 0.9rem;
-            color: var(--accent);
-            letter-spacing: 0.05em;
-            margin-bottom: 12px;
-        }
-
-        .offer-item p {
-            font-size: 1rem;
-            color: var(--muted);
-        }
-
-        .cta {
-            padding: 80px 0;
-        }
-
-        /* The body reads left like the rest of the page; the button and the
-           access lines beneath it form a centered action block. */
-        .cta .button-row,
-        .cta .button-row ~ p {
-            text-align: center;
-        }
-
-        .cta .button-row {
-            margin-top: 8px;
-        }
-
-        .cta h3 {
-            font-size: 1.6rem;
-            font-weight: 400;
-            margin-bottom: 24px;
-            color: var(--text);
-        }
-
-        .cta p {
+        .opt {
+            font: inherit;
             font-size: 1.05rem;
-            color: var(--muted);
-            margin-bottom: 32px;
+            text-align: left;
+            color: var(--text);
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 16px 18px;
+            cursor: pointer;
+            transition: border-color 0.2s ease, background 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        a.button {
-            display: inline-block;
-            padding: 16px 48px;
-            border: 1px solid var(--accent);
+        .opt:hover, .opt:focus-visible {
+            border-color: var(--accent);
+            background: var(--accent-dim);
+            outline: none;
+        }
+
+        .opt small {
+            display: block;
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+
+        .result {
+            border-left: 2px solid var(--accent);
+            padding: 4px 0 4px 20px;
+        }
+
+        .result .door-tag {
+            color: var(--accent);
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .result .read {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .restart {
+            font: inherit;
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            margin-top: 18px;
+        }
+
+        /* ---------- Proof ---------- */
+        blockquote {
+            font-size: 1.15rem;
+            font-style: italic;
+            border-left: 2px solid var(--accent);
+            padding-left: 20px;
+            margin-bottom: 22px;
+        }
+
+        .video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .video iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .caption {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-top: 14px;
+        }
+
+        .caption a, .text-link {
             color: var(--accent);
             text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+        }
+
+        .proof-divider {
+            border-top: 1px solid var(--border);
+            margin: 48px 0 40px;
+        }
+
+        details summary {
+            color: var(--accent);
+            cursor: pointer;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+
+        details .full {
+            margin-top: 20px;
+            color: var(--muted);
             font-size: 1rem;
-            letter-spacing: 0.1em;
+            line-height: 1.85;
+        }
+
+        details .full p { margin-bottom: 14px; font-size: 1rem; }
+
+        /* ---------- About ---------- */
+        .about {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            width: 180px;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .about div { flex: 1; min-width: 240px; }
+
+        /* ---------- Buttons / CTA ---------- */
+        a.button {
+            display: inline-block;
+            padding: 16px 44px;
+            border: 1px solid var(--accent);
+            background: var(--accent);
+            color: var(--bg);
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            transition: all 0.3s ease;
+            transition: background 0.25s ease, color 0.25s ease;
         }
 
         a.button:hover {
-            background: var(--accent);
-            color: var(--bg);
+            background: transparent;
+            color: var(--accent);
         }
 
+        .cta {
+            padding: 72px 0 64px;
+        }
+
+        .cta h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 18px;
+        }
+
+        .cta .terms {
+            color: var(--accent);
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 18px;
+        }
+
+        .cta p { color: var(--muted); font-size: 1.05rem; margin-bottom: 26px; }
+
+        .cta .button-row { margin: 8px 0 20px; }
+
+        .cta .small { font-size: 0.9rem; margin-bottom: 8px; }
+
         footer {
-            padding: 40px 0;
+            padding: 36px 0 48px;
             text-align: center;
             color: var(--muted);
             font-size: 0.85rem;
@@ -223,178 +416,281 @@
             border-bottom: 1px solid var(--border);
         }
 
-        footer a:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
+        @media (min-width: 720px) {
+            .hero { padding: 88px 0 48px; }
+            .hero h1 { font-size: 3.1rem; }
+            .doors { grid-template-columns: 1fr 1fr; }
+            .options { grid-template-columns: 1fr 1fr; }
+            section { padding: 88px 0; }
+            .about img { width: 220px; }
         }
 
-        @media (max-width: 600px) {
-            header {
-                padding: 48px 0 40px;
-            }
-
-            .hero h2 {
-                font-size: 1.5rem;
-            }
-
-            section, .offer, .cta {
-                padding: 56px 0;
-            }
-
-            blockquote {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Scroll reveal — .reveal is only added by JS, so content stays visible without it */
+        /* Scroll reveal: .reveal is only added by JS, so content stays visible without it */
         .reveal {
             opacity: 0;
-            transform: translateY(16px);
+            transform: translateY(14px);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
-        .reveal.visible {
-            opacity: 1;
-            transform: none;
-        }
+        .reveal.visible { opacity: 1; transform: none; }
     </style>
 </head>
 <body>
 
 <div class="container">
 
-    <header>
-        <h1>Logan King</h1>
-        <p class="tagline">Seer</p>
-    </header>
-
-    <div class="hero">
-        <h2>You've been solving the wrong problem. I find the real one — and walk you out of it.</h2>
-        <p>Once you see it, the way out becomes obvious.</p>
+    <div class="topbar">
+        <a class="brand" href="index.html" aria-label="Logan King, home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 17.5 L4.5 7 L9 11.5 L12 4.5 L15 11.5 L19.5 7 L21 17.5 Z"/>
+                <path d="M3.5 20.5 H20.5"/>
+            </svg>
+            Logan King
+        </a>
+        <a class="nav-link" href="work-with-me.html">Work with me</a>
     </div>
 
-    <section>
-        <h3>The problem no one else is solving</h3>
-        <p>The only thing between you and what you want is something you can't see.</p>
-        <p>Not a lack of strategy. Not a lack of effort. Not a lack of intelligence. A belief so deeply embedded it doesn't feel like a belief at all. It feels like reality. Like "just how things are."</p>
-        <p>It runs your pricing, your relationships, your confidence, your sex life, your career — all from a place you've never looked. Because you don't know it's there.</p>
-        <p>You've been to therapy. You've hired coaches. You've read the books, done the seminars, put in the work. And something is still stuck. The same pattern keeps showing up in different clothes.</p>
-        <p class="muted">That's because no one has found the thing underneath all of it — and even if they could, finding it isn't enough.</p>
-    </section>
+    <header class="hero">
+        <p class="eyebrow">Powerful Relationships</p>
+        <h1>Every yes you want is someone else's to give.</h1>
+        <p>A buyer. A partner. A room. I read what is actually happening between you, and show you how to hold your power in it.</p>
+        <a class="jump" href="#reader">Which one is costing you the most? ↓</a>
+    </header>
 
-    <section>
-        <h3>What I do</h3>
-        <p>I see the invisible beliefs running your life the way most people see furniture — they're just there, obvious, in the room. In a single conversation, I can often find the one root pattern showing up across money, sex, relationships, confidence, and identity.</p>
-        <p>But finding the pattern is only half the work. The other half is helping you come back to what's actually true — what your heart wants underneath the fear, underneath the stories, underneath the conditioning. And then walking you into the move that's actually yours.</p>
-        <p class="muted" style="margin-top: 32px; font-style: italic;">It took me 28 years of walking through my own fire to be able to see yours in 90 minutes.</p>
-    </section>
-
-    <section>
-        <h3>Client experiences</h3>
-
-        <!-- Alex Maklai video testimonial. Replace YOUTUBE_VIDEO_ID with the ID of the unlisted upload before publishing. -->
-        <div style="margin-bottom: 56px;">
-            <blockquote style="font-size: 1.15rem; border-left: 2px solid var(--accent); padding-left: 24px; margin-bottom: 16px; padding-top: 0; padding-bottom: 0; border-bottom: none;">"The outcome could be very traumatic or even fatal."</blockquote>
-            <blockquote style="font-size: 1.15rem; border-left: 2px solid var(--accent); padding-left: 24px; margin-bottom: 24px; padding-top: 0; padding-bottom: 0; border-bottom: none;">"I felt like an older brother protected me — I got used to protecting myself on my own, but this time I didn't realize that I needed more protection."</blockquote>
-            <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border);">
-                <iframe src="https://www.youtube-nocookie.com/embed/7gPgctEQe_U?rel=0" title="Alex Maklai — video testimonial" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <p class="muted" style="margin-top: 16px; font-size: 0.95rem;">Alex Maklai, founder of the Billion Views Club — on a threat of violence, and what changed because Logan was there. <a href="https://www.instagram.com/alex_maklai" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Find Alex on Instagram →</a></p>
+    <div class="doors">
+        <div class="door">
+            <p class="numeral">Door I</p>
+            <h2>Money</h2>
+            <p class="who">The people who pay you, build with you, and follow you.</p>
+            <ul>
+                <li>Why a buyer says yes, and what they are deciding in the silence after your number.</li>
+                <li>How value gets created between two people, so the price makes sense to both of you.</li>
+                <li>Holding your frame and your price when the room pushes.</li>
+                <li>The cofounder, the team, the board: the dynamics nobody inside can see.</li>
+            </ul>
         </div>
+        <div class="door">
+            <p class="numeral">Door II</p>
+            <h2>Intimacy</h2>
+            <p class="who">The person you come home to, or want to.</p>
+            <ul>
+                <li>What your partner is doing, and why.</li>
+                <li>How to get back to a good place after it goes wrong.</li>
+                <li>Desire said out loud, clearly enough to get a real answer.</li>
+                <li>Power held with consent, so both of you can trust it.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="engine">Both doors run on one engine: <strong>reading people.</strong> What they want, what they fear, and what they will do next. I tell you what I see, and the move that follows.</p>
+
+    <section class="reader" id="reader" aria-live="polite">
+        <h3>Which relationship is costing you the most?</h3>
+        <div id="reader-body"></div>
+    </section>
+
+    <section>
+        <h3>What clients say</h3>
+
+        <blockquote>"I felt like an older brother protected me. I got used to protecting myself on my own, but this time I didn't realize that I needed more protection."</blockquote>
+        <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/7gPgctEQe_U?rel=0" title="Alex Maklai, video testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="caption">Alex Maklai, founder of the Billion Views Club, on a threat of violence and what changed because Logan was there. <a href="https://www.instagram.com/alex_maklai">Find Alex on Instagram →</a></p>
+
+        <div class="proof-divider"></div>
 
         <!-- Second testimonial: different client (6-month individual engagement), anonymous at his request. -->
-        <div style="border-top: 1px solid var(--border); padding-top: 48px;">
-        <p class="muted" style="margin-bottom: 24px; font-size: 0.95rem;">From another client — a six-month individual engagement. Shared with permission; his name is withheld at his request.</p>
-        <blockquote style="font-size: 1.15rem; border-left: 2px solid var(--accent); padding-left: 24px; margin-bottom: 24px;">"In just 6 months with working with Logan, I've transformed from a state of helpless near bed-ridden fear and anxiety, to standing proud in who I am in both strengths and vulnerabilities."</blockquote>
-        <blockquote style="font-size: 1.15rem; border-left: 2px solid var(--accent); padding-left: 24px; margin-bottom: 24px;">"Logan has a special skill of seeing beyond the outer layer of your fear based, triggered state, and into what your heart and being really desire deep down — a part of yourself that still believes that your desires are possible."</blockquote>
-        <blockquote style="font-size: 1.15rem; border-left: 2px solid var(--accent); padding-left: 24px; margin-bottom: 24px;">"I now see clearer than ever that being attractive is available to everyone and that it's not about attaining perfect looks and outer status but is much more about broadcasting confidently and clearly who we are to those around us and letting them decide whether we have something to offer them."</blockquote>
-        <details style="margin-top: 16px;">
-            <summary style="color: var(--accent); cursor: pointer; font-size: 0.95rem; letter-spacing: 0.05em;">Read the full testimonial</summary>
-            <div style="margin-top: 24px; color: var(--muted); font-size: 1rem; line-height: 1.9;">
-                <p style="margin-bottom: 16px;">It's difficult to summarize the enormous benefit that working with Logan has had on my life. While a big part of our work together was centered around sexual embodiment and working through old patterns of shame surrounding that, the benefits of this work has spilled over into almost all aspects of my life.</p>
-                <p style="margin-bottom: 16px;">I sought out Logan around a time that I was grappling with deep shame, isolation and a feeling of impending doom — and that the things I was facing then would define me and the rest of my life, solidifying into my eventual fate. It is really difficult to describe the feelings around this, but I felt a constant sense of being trapped at all angles without a possibility of change. A feeling of being completely frozen and helpless. Basically, I felt like I would never share an intimate moment with a woman again. Little did I know that just a few months later, I would.</p>
-                <p style="margin-bottom: 16px;">I've learned that our thoughts and fears truly are deceiving and especially convincing in how real they feel when we are in them. This pattern of feeling frozen persisted for years until the day I talked to Logan. He immediately made me feel less like a unique case and more that my feelings were a completely normal aspect of my past conditionings. But most importantly that I wasn't my conditioning.</p>
-                <p style="margin-bottom: 16px;">Logan has a special skill of seeing beyond the outer layer of your fear based, triggered state, and into what your heart and being really desire deep down — a part of yourself that still believes that your desires are possible. After a few months of working with him, I felt equipped with tools and strategies to be able to hold those old feelings with care and tenderness while going after the juicy and healing connections that I truly wanted. I learned inner resilience and fortitude. In just 6 months with working with Logan, I've transformed from a state of helpless near bed-ridden fear and anxiety, to standing proud in who I am in both strengths and vulnerabilities. While I am still growing and learning I feel extremely proud of myself that I've learned how to broadcast my desires in the company of women who I desire to have connections with, rather than contracting and shutting down like I did before.</p>
-                <p style="margin-bottom: 16px;">Through this work, I've been able to strip away old beliefs that I previously held as fact. I now see clearer than ever that being attractive is available to everyone and that it's not about attaining perfect looks and outer status but is much more about broadcasting confidently and clearly who we are to those around us and letting them decide whether we have something to offer them. I've been pleasantly surprised to learn that quite often I do have quite a bit to offer. I am so grateful to Logan for his service and seeing potential that I previously couldn't see in myself.</p>
+        <p class="muted" style="font-size: 0.95rem; margin-bottom: 20px;">From another client, after a six-month individual engagement. Shared with permission; his name is withheld at his request.</p>
+        <blockquote>"In just 6 months with working with Logan, I've transformed from a state of helpless near bed-ridden fear and anxiety, to standing proud in who I am in both strengths and vulnerabilities."</blockquote>
+        <blockquote>"Logan has a special skill of seeing beyond the outer layer of your fear based, triggered state, and into what your heart and being really desire deep down."</blockquote>
+        <details>
+            <summary>Read the full testimonial</summary>
+            <div class="full">
+                <p>It's difficult to summarize the enormous benefit that working with Logan has had on my life. While a big part of our work together was centered around sexual embodiment and working through old patterns of shame surrounding that, the benefits of this work has spilled over into almost all aspects of my life.</p>
+                <p>I sought out Logan around a time that I was grappling with deep shame, isolation and a feeling of impending doom, and that the things I was facing then would define me and the rest of my life, solidifying into my eventual fate. It is really difficult to describe the feelings around this, but I felt a constant sense of being trapped at all angles without a possibility of change. A feeling of being completely frozen and helpless. Basically, I felt like I would never share an intimate moment with a woman again. Little did I know that just a few months later, I would.</p>
+                <p>I've learned that our thoughts and fears truly are deceiving and especially convincing in how real they feel when we are in them. This pattern of feeling frozen persisted for years until the day I talked to Logan. He immediately made me feel less like a unique case and more that my feelings were a completely normal aspect of my past conditionings. But most importantly that I wasn't my conditioning.</p>
+                <p>Logan has a special skill of seeing beyond the outer layer of your fear based, triggered state, and into what your heart and being really desire deep down, a part of yourself that still believes that your desires are possible. After a few months of working with him, I felt equipped with tools and strategies to be able to hold those old feelings with care and tenderness while going after the juicy and healing connections that I truly wanted. I learned inner resilience and fortitude. In just 6 months with working with Logan, I've transformed from a state of helpless near bed-ridden fear and anxiety, to standing proud in who I am in both strengths and vulnerabilities. While I am still growing and learning I feel extremely proud of myself that I've learned how to broadcast my desires in the company of women who I desire to have connections with, rather than contracting and shutting down like I did before.</p>
+                <p>Through this work, I've been able to strip away old beliefs that I previously held as fact. I now see clearer than ever that being attractive is available to everyone and that it's not about attaining perfect looks and outer status but is much more about broadcasting confidently and clearly who we are to those around us and letting them decide whether we have something to offer them. I've been pleasantly surprised to learn that quite often I do have quite a bit to offer. I am so grateful to Logan for his service and seeing potential that I previously couldn't see in myself.</p>
                 <p>I hope that if any part of my story resonated with you, that you will also consider working with Logan to become that much closer to living a life you never thought was possible.</p>
             </div>
         </details>
-        </div>
-
-        <div style="text-align: center; margin-top: 64px;">
-            <p class="muted" style="margin-bottom: 24px;">Their problems looked unsolvable too.</p>
-            <a href="sms:8654568455" class="button">Text me</a>
-        </div>
-    </section>
-
-    <section>
-        <h3>How it works</h3>
-        <p>I work with you, and your resistance to it reveals the patterns. I push on things. I watch what happens. Every moment of engagement is a moment where the invisible becomes visible.</p>
-        <p>Then I help you find the move that's actually yours — not the one your fear has been choosing for you.</p>
-        <p>The disorientation is part of it. Seeing a pattern you've lived inside your whole life feels like the floor tilting before it feels like clarity.</p>
-        <p>Sex, money, confidence, identity — those are just the surfaces where the beliefs show up. Underneath, it's always the same machinery. One root belief, creating inevitable outcomes you didn't know you were building.</p>
-        <p>Relationships and crisis. Those are the specialties — from the bedroom to the boardroom.</p>
-        <p>Your external world is a delayed reflection of your internal one. I align the internal one. The rest follows.</p>
     </section>
 
     <section>
         <h3>When it's on fire</h3>
-        <p>Some problems are burning — a threat, an attack on your name, a conflict tearing through your community. Fear picks the move that makes it worse. I see the move that doesn't — while it's still happening.</p>
+        <p>A threat. An attack on your name. A room turning on someone. Fear picks the move that makes it worse. I see the move that settles it, while it is still happening.</p>
         <p class="muted">If it's burning right now, say so when you text me. Crisis goes to the front of the line.</p>
     </section>
 
     <section>
-        <h3>The book</h3>
-        <p>I wrote a book on how good people harm each other when invisible beliefs run the show — and how to see through them. It uses sex-positive communities as the laboratory, because they're the highest-pressure human environment I could find: where invisible beliefs produce visible damage fastest.</p>
-        <p>The patterns are universal — narrative lock, fawning, rescuer damage, filters that create the harm you're scanning for, response proportional to reality instead of fear. If you run a team, a company, or any space where humans interact under pressure, these are your patterns. I studied them in the hardest lab.</p>
-        <p class="muted">The book isn't publicly for sale. It's shared privately — if we talk and it's right for you, I'll hand you a copy.</p>
-    </section>
-
-    <section>
         <h3>Who I am</h3>
-        <div style="display: flex; gap: 36px; align-items: flex-start; flex-wrap: wrap;">
-            <img src="logan.jpg" alt="Logan King" style="width: 220px; max-width: 100%; flex-shrink: 0; border-radius: 4px; border: 1px solid var(--border);">
-            <div style="flex: 1; min-width: 260px;">
-                <p>I spent years as a systems engineer, finding the one hidden fault that everything else in a complex system quietly depends on. Now I do that with human lives.</p>
-                <p>The seeing came from walking through my own fire — and from studying, up close, in the highest-pressure human environments I could find, how good people harm each other when invisible beliefs run the show. The book above is what I learned.</p>
+        <div class="about">
+            <img src="logan-portrait.jpg" alt="Logan King" width="440" height="660">
+            <div>
+                <p>I spent years as a systems engineer, finding the one hidden fault that everything else in a complex system quietly depends on. Now I find it between people.</p>
+                <p>I wrote a book on power between people: how good people harm each other when fear runs the room, and how to see clearly when the room can't. It's shared privately. If we talk and it's right for you, I'll hand you a copy.</p>
             </div>
         </div>
     </section>
 
     <section>
         <h3>Who this is for</h3>
-        <p><strong>For individuals:</strong> You keep ending up with the same outcomes — in money, sex, relationships, career, confidence. You even know what you should do — and watch yourself do the same thing anyway. Something is keeping you from the life you know is possible. You've tried everything else. You're ready for someone who can see the thing no one has shown you and walk you through what comes next.</p>
-        <p><strong>For organizations:</strong> You run a company, a leadership team, or an organization where people interact under pressure. You have a situation where the invisible human dynamics are driving the outcome — a conflict in progress, a pattern repeating across your culture, a strategy built on a foundation nobody knows to check. You want someone who can see what your team can't see from inside it, and give you something actionable.</p>
-        <p class="muted">The work is seeing what's true, not what's comfortable.</p>
+        <p>People who bring the relationship and are willing to be in the room themselves. I tell you what I see, and I guide you through every move that follows. You make the moves. I'll ask you to.</p>
+        <p class="muted">People who want to be agreed with, or want someone else fixed without being in the room, will find other help a better fit.</p>
     </section>
 
-    <section>
-        <h3>Who this is not for</h3>
-        <p>People who want to be agreed with. People who want someone else fixed — a partner, a cofounder — without being in the room themselves. People who want what they already believe confirmed.</p>
-        <p>I tell you what I see, and I know the moves that follow — I'll guide you through every one of them. But you're the one who makes them. And I'll ask you to.</p>
-    </section>
-
-    <div class="cta">
-        <h3>Bring me the problem you've given up on.</h3>
-        <p style="color: var(--accent); font-size: 0.95rem; letter-spacing: 0.05em; margin-bottom: 24px;">One conversation — up to 90 minutes, no charge</p>
-        <p>I'll show you what's actually running it. The real thing, not a sales pitch. If we're a fit, we'll both know. If not, we part ways.</p>
+    <div class="cta" id="talk">
+        <h3>Bring me the relationship that's costing you the most.</h3>
+        <p class="terms">One conversation, up to 90 minutes, no charge</p>
+        <p>I'll show you what's actually running it. If we're a fit, we'll both know.</p>
         <div class="button-row"><a href="sms:8654568455" class="button">Text me</a></div>
-        <p class="muted" style="margin-top: 20px; font-size: 0.9rem;">I answer these myself, between deep work and retreat weeks. If it's burning, say so — crisis moves first.</p>
-        <p class="muted" style="margin-top: 8px; font-size: 0.9rem;">On a computer? Text me from your phone:<br>+1 (865) 456-8455</p>
-        <p style="margin-top: 32px; font-size: 0.95rem;"><a href="work-with-me.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">See full engagement options →</a></p>
+        <p class="small muted">I answer these myself. If it's burning, say so: crisis moves first.</p>
+        <p class="small muted">On a computer? Text me from your phone: +1 (865) 456-8455</p>
+        <p style="margin-top: 26px; font-size: 0.95rem;"><a class="text-link" href="work-with-me.html">See full engagement options →</a></p>
     </div>
 
     <footer>
-        <p>Logan King — Seer · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+        <p>Logan King · Powerful Relationships · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
     </footer>
 
 </div>
 
 <script>
+document.documentElement.classList.add('js');
+
+/* The question flow: two taps, one read, a text you can send. Everything
+   stays in this page; nothing is stored or transmitted. The only output is
+   an sms: link the visitor chooses to open. */
+(() => {
+    const PHONE = '8654568455';
+    const FLOW = {
+        buyer: {
+            label: 'A buyer or client', sub: 'Door I, Money',
+            door: 'Door I · Money',
+            q: 'What keeps happening?',
+            opts: [
+                ['They go quiet after I name the price.',
+                 'The silence after a number is the buyer deciding what you believe about it. What you do in the next ten seconds answers them.'],
+                ['I lower the number before anyone asks.',
+                 'A discount nobody asked for answers a question nobody asked. It tells the buyer the first number was a guess.'],
+                ['They love the conversation and never buy.',
+                 'Warmth with no clear offer leaves a buyer nothing to say yes to. A yes needs a door with a number on it.']
+            ]
+        },
+        team: {
+            label: 'A cofounder or my team', sub: 'Door I, Money',
+            door: 'Door I · Money',
+            q: 'What keeps happening?',
+            opts: [
+                ['The same fight keeps coming back.',
+                 'A fight that returns is running on something neither of you has said. Once it is said, the fight has nothing left to run on.'],
+                ['I give ground to keep the peace.',
+                 'Peace bought with your ground gets more expensive every time you pay for it. A frame can be held warmly.'],
+                ['My team can\'t see what I see.',
+                 'People inside a system see the system\'s story. The pattern driving it is visible from one step outside.']
+            ]
+        },
+        partner: {
+            label: 'My partner', sub: 'Door II, Intimacy',
+            door: 'Door II · Intimacy',
+            q: 'What keeps happening?',
+            opts: [
+                ['The same fight, in different clothes.',
+                 'Every version of that fight runs on one engine. Once you can both see it, you can stop feeding it.'],
+                ['Desire goes unsaid between us.',
+                 'Unsaid desire turns into distance. Said clearly, it gets a real answer, and a real answer is something two people can work with.'],
+                ['After a conflict, we stay far apart.',
+                 'Getting back to a good place is a skill. Repair done well leaves two people closer than they were before the fight.']
+            ]
+        },
+        want: {
+            label: 'Someone I want', sub: 'Door II, Intimacy',
+            door: 'Door II · Intimacy',
+            q: 'What keeps happening?',
+            opts: [
+                ['I keep what I want to myself.',
+                 'Hiding a want keeps you safe from a no and far from a yes. Said out loud, with room for their answer, desire becomes attractive.'],
+                ['I say it, and it lands wrong.',
+                 'How a want lands depends on whether it leaves the other person free. Desire that leaves them free is the kind people lean toward.'],
+                ['I freeze around the people I want most.',
+                 'The freeze is an old rule running in the body. Once a rule is seen, it starts to loosen.']
+            ]
+        }
+    };
+
+    const body = document.getElementById('reader-body');
+    if (!body) return;
+
+    const el = (tag, cls, text) => {
+        const n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (text) n.textContent = text;
+        return n;
+    };
+
+    function stepOne() {
+        body.replaceChildren();
+        body.append(el('p', 'step-label', 'Tap one'));
+        const grid = el('div', 'options');
+        Object.entries(FLOW).forEach(([key, f]) => {
+            const b = el('button', 'opt', f.label);
+            b.type = 'button';
+            b.append(el('small', '', f.sub));
+            b.addEventListener('click', () => stepTwo(key));
+            grid.append(b);
+        });
+        body.append(grid);
+    }
+
+    function stepTwo(key) {
+        const f = FLOW[key];
+        body.replaceChildren();
+        body.append(el('p', 'step-label', f.label + ' · ' + f.q));
+        const grid = el('div', 'options');
+        f.opts.forEach(([what, read]) => {
+            const b = el('button', 'opt', what);
+            b.type = 'button';
+            b.addEventListener('click', () => result(f, what, read));
+            grid.append(b);
+        });
+        body.append(grid);
+        body.append(restartButton());
+    }
+
+    function result(f, what, read) {
+        body.replaceChildren();
+        const r = el('div', 'result');
+        r.append(el('p', 'door-tag', f.door));
+        r.append(el('p', 'read', read));
+        const msg = 'Hi Logan, I found you at slkingco.com. The relationship costing me the most: '
+            + f.label.toLowerCase() + '. ' + what;
+        const a = el('a', 'button', 'Bring me this one');
+        a.href = 'sms:' + PHONE + '?&body=' + encodeURIComponent(msg);
+        const row = el('div', '');
+        row.append(a);
+        r.append(row);
+        r.append(el('p', 'muted small-note', 'Opens a text on your phone with your answer filled in. You choose whether to send it.'));
+        r.lastChild.style.cssText = 'font-size: 0.9rem; margin-top: 14px;';
+        body.append(r);
+        body.append(restartButton());
+        document.getElementById('reader').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function restartButton() {
+        const b = el('button', 'restart', 'Start over');
+        b.type = 'button';
+        b.addEventListener('click', stepOne);
+        return b;
+    }
+
+    stepOne();
+})();
+
 (() => {
     if (!('IntersectionObserver' in window)) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const els = document.querySelectorAll('header, .hero, section, .cta, footer');
+    const els = document.querySelectorAll('.door, .engine, section, .cta, footer');
     const io = new IntersectionObserver(entries => {
         entries.forEach(e => {
             if (e.isIntersecting) {
