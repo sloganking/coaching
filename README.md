@@ -10,11 +10,11 @@ Read [`writing-values.md`](writing-values.md) first and run its ship-tests. The 
 
 ## Structure
 
-- `index.html` — the whole main page, built around "powerful relationships" (Sep 24, 2026): hero, the two doors (Money, Intimacy), the reading-people engine line, a two-tap question flow (static JS, nothing stored; its only output is a prefilled `sms:` link), testimonials, crisis, bio + book, who it's for, CTA. The prior Seer version is preserved on branch `seer-site-before-powerful-relationships`.
+- `index.html` — the whole main page: hero, problem, what I do, client experiences (video + text testimonials), how it works, crisis work, the book, bio, who it's (not) for, CTA. Single file, inline CSS/JS, no build step.
 - `work-with-me.html` — engagement tiers and pricing.
 - `404.html` — branded not-found page.
 - `writing-values.md` — the voice/values spec for all site copy.
-- `logan.jpg`, `logan-portrait.jpg` (440px web copy used on the page), `favicon.png`, `apple-touch-icon.png`, `og-image.jpg` — photo and derived icon/link-preview assets.
+- `logan.jpg`, `favicon.png`, `apple-touch-icon.png`, `og-image.jpg` — photo and derived icon/link-preview assets.
 
 ## Deploying
 
