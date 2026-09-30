@@ -231,7 +231,20 @@
         @media (max-width: 600px) {
             .photo-quote {
                 flex-direction: column;
-                gap: 24px !important;
+                gap: 28px !important;
+            }
+
+            .photo-quote .pq-person {
+                width: 100% !important;
+            }
+
+            .photo-quote .pq-photo {
+                width: 200px !important;
+                height: 200px !important;
+            }
+
+            .photo-quote .pq-quote {
+                width: 100%;
             }
 
             header {
@@ -308,11 +321,14 @@
         </div>
 
         <!-- Alexander Borek written testimonial (Sep 28 2026, SMS). Named use approved by him: "You can use it all". Photo (Data Masterclass Europe 2023, from his site) approved by him Sep 30 2026 12:10am, SMS: "Yes". -->
-        <div class="photo-quote" style="border-top: 1px solid var(--border); padding-top: 48px; margin-bottom: 56px; display: flex; gap: 36px; align-items: flex-start; flex-wrap: wrap;">
-            <img src="alexander-borek-circle.jpg" alt="Alexander Borek speaking at Data Masterclass Europe 2023" style="width: 150px; height: 150px; object-fit: cover; flex-shrink: 0; border-radius: 50%; border: 2px solid var(--accent);">
-            <div style="flex: 1; min-width: 260px;">
-            <blockquote style="font-size: 1.15rem; border-left: 2px solid var(--accent); padding-left: 24px; margin-bottom: 16px; padding-top: 0; padding-bottom: 0; border-bottom: none;">"Logan's coaching session decomposed my entire business model and helped me to focus on the fastest path to adding 1 Million USD of profit."</blockquote>
-            <p class="muted" style="margin-top: 16px; font-size: 0.95rem;">Alexander Borek, CEO and Founder, <a href="https://www.datamasterclass.com" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">datamasterclass.com</a></p>
+        <div class="photo-quote" style="border-top: 1px solid var(--border); padding-top: 48px; margin-bottom: 56px; display: flex; gap: 40px; align-items: center;">
+            <div class="pq-person" style="flex-shrink: 0; width: 190px; text-align: center;">
+                <img class="pq-photo" src="alexander-borek-circle.jpg" alt="Alexander Borek speaking at Data Masterclass Europe 2023" style="width: 160px; height: 160px; object-fit: cover; display: block; margin: 0 auto 16px; border-radius: 50%; border: 3px solid var(--accent);">
+                <p style="margin: 0; color: var(--accent); font-size: 1.1rem; letter-spacing: 0.02em;">Alexander Borek</p>
+                <p class="muted" style="margin: 4px 0 0; font-size: 0.85rem; line-height: 1.5;">CEO and Founder, <a href="https://www.datamasterclass.com" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); white-space: nowrap;">Data Masterclass</a></p>
+            </div>
+            <div class="pq-quote" style="flex: 1; min-width: 0;">
+                <blockquote style="font-size: 1.15rem; border-left: 2px solid var(--accent); padding-left: 24px; margin: 0; padding-top: 0; padding-bottom: 0; border-bottom: none;">"Logan's coaching session decomposed my entire business model and helped me to focus on the fastest path to adding 1 Million USD of profit."</blockquote>
             </div>
         </div>
 
