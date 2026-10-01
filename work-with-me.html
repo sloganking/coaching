@@ -1,300 +1,89 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <!--
     COPY GATE (for any AI or human editing this file):
     A push to this repo deploys LIVE to slkingco.com immediately.
     Before changing ANY user-facing text, read writing-values.md (this repo)
     and ../RPM/selling-language.md (Logan's private repo), and pass every
     changed sentence through their checklists. Full instructions: CLAUDE.md.
--->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work with me — Logan King</title>
-    <meta name="description" content="One day with Logan King is $10,000. Up to a year is $100,000. Organizations: the Tactical Advisory. First conversation is free.">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Work with me — Logan King">
-    <meta property="og:description" content="One day with Logan King is $10,000. Up to a year is $100,000. First conversation is free.">
-    <meta property="og:image" content="https://slkingco.com/og-image.jpg">
-    <meta property="og:url" content="https://slkingco.com/work-with-me.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <style>
-        :root {
-            --bg: #0a0a0a;
-            --text: #e8e4de;
-            --muted: #8a8580;
-            --accent: #c9a96e;
-            --border: #2a2825;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        header {
-            padding: 80px 0 60px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 8px;
-        }
-
-        header h1 a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        header p.tagline {
-            font-size: 1rem;
-            color: var(--muted);
-            font-style: italic;
-        }
-
-        .hero {
-            padding: 40px 0 80px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .hero h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            line-height: 1.4;
-            margin-bottom: 32px;
-            color: var(--text);
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--muted);
-            margin-bottom: 24px;
-        }
-
-        .offer {
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .offer-item {
-            margin-bottom: 40px;
-        }
-
-        /* The recommended starting tier reads as the default at a glance:
-           the featured card is boxed; the other tiers stay open. */
-        .offer-item:first-child {
-            background: #0f0e0c;
-            border: 1px solid var(--border);
-            border-left: 2px solid var(--accent);
-            padding: 28px 28px 22px;
-        }
-
-        .offer-item h4 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-
-        .offer-item .price {
-            font-size: 0.9rem;
-            color: var(--accent);
-            letter-spacing: 0.05em;
-            margin-bottom: 12px;
-        }
-
-        .offer-item p {
-            font-size: 1rem;
-            color: var(--muted);
-        }
-
-        .cta {
-            padding: 80px 0;
-        }
-
-        /* The body reads left like the rest of the page; the button and the
-           access lines beneath it form a centered action block. */
-        .cta .button-row,
-        .cta .button-row ~ p {
-            text-align: center;
-        }
-
-        .cta .button-row {
-            margin-top: 8px;
-        }
-
-        .cta h3 {
-            font-size: 1.6rem;
-            font-weight: 400;
-            margin-bottom: 24px;
-            color: var(--text);
-        }
-
-        .cta p {
-            font-size: 1.05rem;
-            color: var(--muted);
-            margin-bottom: 32px;
-        }
-
-        .cta a.button {
-            display: inline-block;
-            padding: 16px 48px;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 1rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .cta a.button:hover {
-            background: var(--accent);
-            color: var(--bg);
-        }
-
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.85rem;
-        }
-
-        footer a {
-            color: var(--muted);
-            text-decoration: none;
-            border-bottom: 1px solid var(--border);
-        }
-
-        footer a:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-
-        @media (max-width: 600px) {
-            header {
-                padding: 48px 0 40px;
-            }
-
-            .hero h2 {
-                font-size: 1.5rem;
-            }
-
-            .offer, .cta {
-                padding: 56px 0;
-            }
-        }
-
-        /* Scroll reveal — .reveal is only added by JS, so content stays visible without it */
-        .reveal {
-            opacity: 0;
-            transform: translateY(16px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: none;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-
-    <header>
-        <h1><a href="index.html">Logan King</a></h1>
-        <p class="tagline">Seer</p>
-    </header>
-
-    <div class="hero">
-        <h2>Work with me</h2>
-        <p>Three ways in. One way to stay.</p>
-    </div>
-
-    <div class="offer">
-
-        <div class="offer-item">
-            <h4>One Day: A Clear Path Forward</h4>
-            <p class="price">$10,000</p>
-            <p>One problem, all day. I'll show you what's been running it, and we build the strategy from there. You leave seeing it, with your next move in hand.</p>
-        </div>
-
-        <div class="offer-item">
-            <h4>One Year: Become Who You Want to Be</h4>
-            <p class="price">$100,000</p>
-            <p>You bring the problem you've given up on. We solve it, and you get up to a year of me. This is for bigger goals, and for hardcore nervous system conditioning. The first six weeks are the diagnostic: we find the root pattern, the belief so embedded it feels like reality, and you watch it running, live, building the outcomes you thought were happening to you. At six weeks, if we are not both all in, either of us calls it — I keep $10,000, you take $90,000 back. The price is for the problem, not the timeframe.</p>
-        </div>
-
-        <div class="offer-item">
-            <h4>One Week: See What Your Company Can't</h4>
-            <p class="price">From $50,000</p>
-            <p>Something in your organization isn't working, and no one inside it can see why. I come to you. For several days I'm on-site, in your meetings and your hallways, talking with your people, until I can see what you can't: the structure that makes the problem inevitable, the pattern in the person whose role keeps producing it, the reason the fix never sticks.</p>
-            <p>You walk away with a tactical document, a cheatsheet and a debrief, built around your values and made tactically executable. Whatever conversation comes next, you walk into it knowing exactly what to do. Priced per situation. One number, everything included.</p>
-        </div>
-
-        <div class="offer-item">
-            <h4>On Demand: The Concierge</h4>
-            <p class="price">$20,000 a year</p>
-            <p>Twenty hours of me a year, whenever you need me, for whatever comes. This begins after we've worked together — clients who've done the work above and want me in their corner as life keeps moving.</p>
-        </div>
-    </div>
-
-    <div class="cta">
-        <h3>Bring me the problem you've given up on.</h3>
-        <p>One conversation, about 30 minutes, no charge. You tell me where you are. I ask questions. You leave knowing where I can help.</p>
-        <div class="button-row"><a href="sms:8654568455" class="button">Text me</a></div>
-        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--muted);">I answer these myself, between deep work and retreat weeks. If it's burning, say so — crisis moves first.</p>
-        <p style="margin-top: 8px; font-size: 0.9rem; color: var(--muted);">On a computer? Text me from your phone:<br>+1 (865) 456-8455</p>
-    </div>
-
-    <footer>
-        <p><a href="index.html">← Back to home</a> · Logan King — Seer · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
-    </footer>
-
-</div>
-
-<script>
-(() => {
-    if (!('IntersectionObserver' in window)) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const els = document.querySelectorAll('header, .hero, .offer-item, .cta, footer');
-    const io = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('visible');
-                io.unobserve(e.target);
-            }
-        });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    els.forEach(el => {
-        el.classList.add('reveal');
-        io.observe(el);
-    });
-})();
-</script>
-
-</body>
-</html>
+--><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Work with me | Logan King</title><meta name="description" content="One day with Logan King is $10,000. Up to a year is $100,000. Organizations: from $50,000. The first conversation is free."><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:title" content="Work with me | Logan King"><meta property="og:description" content="One day with Logan King is $10,000. Up to a year is $100,000. Organizations: from $50,000. The first conversation is free."><meta property="og:image" content="https://slkingco.com/og-image.jpg"><meta property="og:url" content="https://slkingco.com/work-with-me.html"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}h1,h2,h3,.pull{text-wrap:balance}
+body{-webkit-font-smoothing:antialiased;line-height:1.65}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 40px}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 40px;max-width:1240px;margin:0 auto}
+.nav .links{display:flex;gap:34px;align-items:center}.nav .links a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;transition:all .25s ease}
+.video{position:relative;aspect-ratio:16/9;overflow:hidden}
+.video img{width:100%;height:100%;object-fit:cover}
+.video .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.video .disc{width:84px;height:84px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.video .disc svg{margin-left:6px}
+.circle{border-radius:50%;object-fit:cover}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.tclip{position:relative;display:block;width:100%;margin-top:24px;aspect-ratio:16/9;overflow:hidden;border-radius:6px;text-decoration:none}.tclip img{width:100%;height:100%;object-fit:cover;filter:brightness(.62)}.tplay{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);border:2px solid currentColor}.tplay svg{width:18px;height:20px;margin-left:4px}.tlabel{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
+@media(max-width:860px){.grid3,.grid2{grid-template-columns:1fr}.nav .links a:not(.btn){display:none}.wrap{padding:0 22px}.nav{padding:18px 22px}}
+body{background:#000;color:#e9e9e9;font-family:Montserrat,sans-serif;font-size:16px}
+.top{position:absolute;top:0;left:0;right:0;z-index:5}
+.mark{width:46px;height:46px;border:2px solid #c99a4b;color:#c99a4b;display:flex;align-items:center;justify-content:center;font-weight:700;letter-spacing:.06em;text-decoration:none;font-size:15px}
+.nav .links a{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#fff}
+.btn-ghost{border:1px solid #c99a4b;color:#c99a4b!important;padding:12px 24px}
+.btn-solid{background:#c99a4b;color:#000;padding:18px 42px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:13px}.btn-solid:hover{background:#ddb066}
+.hero{position:relative;min-height:820px;display:flex;align-items:center;overflow:hidden;background:#000}
+.hero .photo{position:absolute;right:0;top:0;bottom:0;width:56%;background:url(assets/logan.jpg) center 22%/cover}
+.hero .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.55) 30%,rgba(0,0,0,0) 65%),linear-gradient(0deg,#000 0%,rgba(0,0,0,0) 30%),linear-gradient(180deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 18%)}
+.hero .wrap{position:relative;width:100%}
+.kick{font-size:14px;font-weight:600;font-style:italic;letter-spacing:.22em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+.name{font-weight:800;font-size:96px;line-height:.95;letter-spacing:.04em;color:#c99a4b}
+.hero .sub{max-width:500px;margin:30px 0 38px;font-size:20px;line-height:1.6;color:#e9e9e9;font-weight:300;letter-spacing:.02em}.hero .sub b{font-weight:700}
+.fine{margin-top:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8d8d8d}
+.vidsec{padding:0 0 110px}.vidsec .wrap{max-width:980px}
+.vlabel{text-align:center;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#c99a4b;margin-bottom:22px}
+.video{border:1px solid #2a2a2a}.video img{filter:brightness(.55) saturate(.85)}
+.video .disc{background:transparent;border:2px solid #c99a4b;color:#c99a4b}.vcap{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#fff}
+.sec{padding:120px 0;border-top:1px solid #161616}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#c99a4b;margin-bottom:16px}
+.h2{font-weight:700;font-size:40px;line-height:1.2;letter-spacing:.01em;color:#fff;margin-bottom:22px}
+.h1{font-weight:800;font-size:72px;line-height:1;color:#c99a4b;letter-spacing:.02em}
+.body{font-size:17px;font-weight:300;color:#bdbdbd;max-width:600px;line-height:1.8}
+.proof .h2{margin-bottom:60px;max-width:640px}
+.tcard{border-top:2px solid #c99a4b;padding:36px 4px 0;display:flex;flex-direction:column}
+.ring{width:120px;height:120px;border:2px solid #c99a4b}
+.initials,.vthumb{width:120px;height:120px;border-radius:50%;border:2px solid #c99a4b;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:70px;color:#c99a4b;flex-shrink:0}
+.vthumb{flex-direction:column;gap:6px;font-family:Montserrat;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none}
+.tcard blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;line-height:1.55;color:#f2f2f2;margin:28px 0 22px;flex:1}
+.tcard figcaption b{display:block;color:#fff;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px}.tcard figcaption span{font-size:13px;color:#8d8d8d}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:90px}
+.step{display:flex;gap:26px;padding:28px 0;border-bottom:1px solid #1d1d1d}.step:first-child{padding-top:0}
+.num{font-size:15px;font-weight:700;color:#c99a4b;letter-spacing:.1em;padding-top:6px}
+.step h3{font-size:22px;font-weight:700;color:#fff;margin-bottom:6px}.step p{color:#bdbdbd;font-weight:300}
+.pull{margin:100px 0 0;font-family:'Playfair Display',serif;font-style:italic;font-size:40px;line-height:1.3;color:#fff;max-width:900px}
+.path{padding:44px;background:#0a0a0a;border:1px solid #1d1d1d}
+.path h3{font-size:26px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.25}.path p:last-child{color:#bdbdbd;font-weight:300}
+.fire{margin-top:30px;color:#8d8d8d;font-size:14px}.fire b{color:#c99a4b}
+.about-in{display:grid;grid-template-columns:320px 1fr;gap:80px;align-items:center}
+.ring.big{width:300px;height:300px;border-width:2px}
+.more{margin-top:28px}.more summary{color:#c99a4b;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.morebody{margin-top:18px;color:#bdbdbd;font-weight:300}.morebody p{margin-bottom:14px;max-width:640px}
+.cta{text-align:center;background:#0a0a0a}.cta-in{max-width:760px}.cta .h2{font-size:48px}.cta .body{margin:0 auto 38px}
+.small{font-size:13px;color:#8d8d8d;margin-top:18px}.gold{color:#c99a4b}.small a{color:#c99a4b}
+.foot{padding:36px 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#5f5f5f;border-top:1px solid #161616}.foot a{color:#5f5f5f}
+.phero{padding:200px 0 70px;border-top:none}.phero .body{margin-top:22px}
+.tiers{border-top:none;padding-top:20px}
+.tier{position:relative;padding:44px 40px;border:1px solid #1d1d1d;background:#070707}
+.tier.feat{border:1px solid #c99a4b}
+.badge{position:absolute;top:0;right:0;background:#c99a4b;color:#000;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:8px 14px}
+.tier h3{font-size:24px;font-weight:700;color:#fff}.price{font-size:44px;font-weight:800;color:#c99a4b;margin:12px 0 16px;letter-spacing:.01em}
+.desc{color:#bdbdbd;font-weight:300}.note{margin-top:18px;padding-top:16px;border-top:1px solid #222;color:#e9e9e9;font-size:15px;font-weight:400}
+@media(max-width:860px){.name{font-size:58px}.hero .photo{width:100%;opacity:.45}.split,.about-in{grid-template-columns:1fr}}
+.vthumb{text-align:center;line-height:1.25}
+.tclip{color:#c99a4b}
+</style></head><body><header class="top"><nav class="nav"><a href="index.html" class="mark">LK</a><div class="links"><a href="index.html#results">Results</a><a href="index.html#how">How I work</a><a href="work-with-me.html">Pricing</a><a class="btn btn-ghost" href="sms:8654568455">Text me</a></div></nav></header>
+<section class="sec phero"><div class="wrap"><p class="eyebrow">Work with me</p><h1 class="h1">Three ways in. One way to stay.</h1>
+<p class="body">The first conversation is free. Everything below starts there.</p></div></section>
+<section class="sec tiers"><div class="wrap"><div class="grid2"><div class="tier feat"><span class="badge">Start here</span><p class="eyebrow">One Day</p><h3>A Clear Path Forward</h3><p class="price">$10,000</p><p class="desc">One problem, all day. I'll show you what's been running it, and we build the strategy from there. You leave seeing it, with your next move in hand.</p></div><div class="tier"><p class="eyebrow">One Year</p><h3>Become Who You Want to Be</h3><p class="price">$100,000</p><p class="desc">You bring the problem you've given up on. We solve it, and you get up to a year of me. For bigger goals, and for hardcore nervous system conditioning.</p><p class="note">The first six weeks are the diagnostic. At six weeks, if we are not both all in, either of us calls it: I keep $10,000, you take $90,000 back. The price is for the problem, not the timeframe.</p></div><div class="tier"><p class="eyebrow">One Week</p><h3>See What Your Company Can't</h3><p class="price">From $50,000</p><p class="desc">Something in your organization isn't working, and no one inside it can see why. I come to you, on-site for several days, until I can see what you can't. You walk away with a tactical document, a cheatsheet and a debrief, made tactically executable.</p><p class="note">Priced per situation. One number, everything included.</p></div><div class="tier"><p class="eyebrow">On Demand</p><h3>The Concierge</h3><p class="price">$20,000 a year</p><p class="desc">Twenty hours of me a year, whenever you need me, for whatever comes. This begins after we've worked together, for clients who want me in their corner as life keeps moving.</p></div></div></div></section>
+<section class="sec cta"><div class="wrap cta-in"><h2 class="h2">Bring me the problem you've given up on.</h2>
+<p class="body">One conversation, about 30 minutes, no charge. You tell me where you are. I ask questions. You leave knowing where I can help.</p>
+<a class="btn btn-solid" href="sms:8654568455">Text me <span>&rarr;</span></a><p class="small">On a computer? Text +1 (865) 456-8455 from your phone. I answer these myself.</p>
+<p class="small">Or start with one day: <b class="gold">$10,000</b> &middot; <a href="work-with-me.html">See all options</a></p></div></section><footer class="foot"><div class="wrap">Logan King &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></div></footer></body></html>
